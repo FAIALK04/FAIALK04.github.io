@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Return to Homepage</a>
+    </nav>
+    
+    <h1>Feedback Form</h1>
+    <form id="feedbackForm" action="submitFeedback.php" method="POST"> <!-- Adjust action as needed -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required pattern="[A-Za-z\s]{2,}" title="Country name should only contain letters.">
+        
+        <label for="favColor">Favorite Color Scheme:</label>
+        <select id="favColor" name="favColor" required>
+            <option value="">--Please choose an option--</option>
+            <option value="brown">Brown</option>
+            <option value="white">White</option>
+            <option value="black">Black</option>
+        </select>
+        
+        <label for="reason">Why do you like this color?</label>
+        <textarea id="reason" name="reason" rows="4" required></textarea>
+        
+        <label for="websiteIssues">Any issues with our website?</label>
+        <textarea id="websiteIssues" name="websiteIssues" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="formScript.js"></script> 
+</body>
+</html>
